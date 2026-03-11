@@ -1,5 +1,7 @@
 # .claude
 
+[中文文档](README.zh-CN.md) | **English**
+
 My personal [Claude Code](https://docs.anthropic.com/en/docs/claude-code) settings, custom commands, and agents optimised for vibe coding.
 
 ## What's included
