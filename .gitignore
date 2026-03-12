@@ -1,0 +1,8 @@
+# Ignore local runtime sessions and logs
+backups/
+history.jsonl
+ide/
+metrics/
+plugins/
+projects/
+sessions/
