@@ -1,46 +1,17 @@
 # .claude
 
-This repository is designed to be used directly as your home directory Claude config folder at ~/.claude.
+> 直接作为 `~/.claude` 使用，实现一次配置、多机同步。
 
-For Chinese documentation, see [README.zh-CN.md](README.zh-CN.md).
+## 快速部署
 
-## Goal
+```bash
+# 1. 备份已有配置
+mv ~/.claude.json ~/.claude.json.bak 2>/dev/null || true
+mv ~/.claude ~/.claude.bak 2>/dev/null || true
 
-Keep Claude Code settings in Git so you can clone once and use the same behavior across machines.
+# 2. 克隆仓库
+git clone https://github.com/randomseed713/.claude.git ~/.claude
 
-## Deploy on a new machine
-
-1. Backup existing config if present:
-
-	 mv ~/.claude ~/.claude.bak 2>/dev/null || true
-
-2. Clone this repository as ~/.claude:
-
-	 git clone https://github.com/randomseed713/.claude.git ~/.claude
-
-3. Initialize:
-
-	 cd ~/.claude
-	 bash setup.sh
-
-## Enabled Plugins
-
-These plugins are enabled in `settings.json`:
-
-| Plugin | Description |
-|--------|-------------|
-| everything-claude-code | Agents, skills, hooks, commands, rules, and MCP configurations |
-| claude-hud | Status line display for Claude Code |
-| superpowers | Workflow skills for brainstorming, planning, TDD, debugging, code review |
-| clangd-lsp | C/C++ language server |
-| pyright-lsp | Python language server |
-
-## Enabled MCP Servers
-
-| MCP Server | Description |
-|------------|-------------|
-| context7 | Live documentation lookup |
-| faas-skylarkmcpserver | Skylark MCP server (internal) |
-| arkai-dimamcpserver | Dima MCP server (internal) |
-| antcodemcp-code-mcpserver | AntCode MCP server (internal) |
-
+# 3. 初始化
+cd ~/.claude && bash setup.sh
+```

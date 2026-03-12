@@ -1,8 +1,24 @@
-# Ignore local runtime sessions and logs
-backups/
 history.jsonl
+backups/
+session-env/
+file-history/
 ide/
-metrics/
-plugins/
+paste-cache/
 projects/
+cache/
 sessions/
+shell-snapshots/
+telemetry/
+tasks/
+
+# 插件缓存（可重新安装）
+plugins/*
+!plugins/claude-hud/
+!plugins/claude-hud/*
+
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
